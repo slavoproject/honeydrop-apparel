@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honeydrop Apparel - Modern Women's Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="promo-banner">
+            ✨ New Customers: Get 15% off your first order! | Free shipping on orders $50+
+        </div>
+        <div class="header-main">
+            <div class="logo">HONEYDROP</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('shop')">Shop</a></li>
+                    <li><a onclick="showPage('about')">About</a></li>
+                    <li><a onclick="showPage('support')">Support</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn">🔍</button>
+                <button class="icon-btn">❤️</button>
+                <button class="icon-btn">👤</button>
+                <button class="icon-btn">
+                    🛒
+                    <span class="cart-count">3</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Homepage -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Confidence Looks Good on You</h1>
+                <p>Discover premium-quality fashion that blends affordability, comfort, and style. Designed for the modern woman who values both quality and self-expression.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="showPage('shop')">Shop New Arrivals</button>
+                    <button class="btn btn-secondary" onclick="showPage('shop')">Shop Bestsellers</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=1000&fit=crop" alt="Fashion Model" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="showPage('shop')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=500&fit=crop" alt="Tops & Blouses" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="category-info">
+                        <h3>Tops & Blouses</h3>
+                        <p>Essential styles for every day</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('shop')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=500&fit=crop" alt="Dresses" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="category-info">
+                        <h3>Dresses & Jumpsuits</h3>
+                        <p>From casual to cocktail</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('shop')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=400&h=600&fit=crop" alt="Loungewear" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="category-info">
+                        <h3>Loungewear</h3>
+                        <p>Comfort meets style</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('shop')">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=500&fit=crop" alt="Limited Edition" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="category-info">
+                        <h3>Limited Edition Drops</h3>
+                        <p>Exclusive releases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values">
+            <div class="values-container">
+                <h2 class="section-title">Why Honeydrop?</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">✨</div>
+                        <h3>Quality First</h3>
+                        <p>Premium fabrics and rigorous quality control. Every garment is designed to last with fade-resistant dyes and reinforced seams.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💰</div>
+                        <h3>Affordable Luxury</h3>
+                        <p>Most items $15-$65. Premium fashion shouldn't break the bank. Enjoy quality pieces at prices that work for you.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h3>Inclusive by Design</h3>
+                        <p>Sizes XS-3XL (expanding to 4XL). Styles designed for diverse body types. Fashion is for everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Signup -->
+        <section class="email-signup">
+            <h2>Join the Honeydrop Community</h2>
+            <p>Get 15% off your first order + exclusive access to new collections</p>
+            <form class="email-form">
+                <input type="email" class="email-input" placeholder="Enter your email">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Shop Page -->
+    <div id="shop" class="page">
+        <div class="shop-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters">
+                <div class="filter-section">
+                    <h3>Size</h3>
+                    <label class="filter-option">
+                        <input type="checkbox"> XS (0-2)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> S (4-6)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> M (8-10)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> L (12-14)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> XL (16-18)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> 2XL (20-22)
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> 3XL (24-26)
+                    </label>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Category</h3>
+                    <label class="filter-option">
+                        <input type="checkbox"> Tops & Blouses
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Dresses
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Loungewear
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Accessories
+                    </label>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <label class="filter-option">
+                        <input type="checkbox"> Under $25
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> $25 - $45
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> $45 - $65
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox"> Over $65
+                    </label>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <div class="products-header">
+                    <div class="product-count">Showing 24 products</div>
+                    <select class="sort-select">
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest</option>
+                        <option>Best Selling</option>
+                    </select>
+                </div>
+
+                <div class="products">
+                    <!-- Product Card 1 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=600&fit=crop" alt="Classic Cotton Tee" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="product-badge">NEW</span>
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Classic Cotton Tee</div>
+                            <div class="product-price">$24.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(127)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop" alt="Flowy Midi Dress" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="product-badge">BESTSELLER</span>
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Flowy Midi Dress</div>
+                            <div class="product-price">$48.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(203)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=600&fit=crop" alt="Cozy Lounge Set" style="width: 100%; height: 100%; object-fit: cover;">
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Cozy Lounge Set</div>
+                            <div class="product-price">$42.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span>(89)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=400&h=600&fit=crop" alt="Silk Blouse" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="product-badge">LIMITED</span>
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Silk Blouse</div>
+                            <div class="product-price">$58.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(156)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=600&fit=crop" alt="High-Waist Jeans" style="width: 100%; height: 100%; object-fit: cover;">
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">High-Waist Jeans</div>
+                            <div class="product-price">$52.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(178)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop" alt="Wrap Dress" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="product-badge">NEW</span>
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Wrap Dress</div>
+                            <div class="product-price">$44.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span>(92)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 7 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=600&fit=crop" alt="Knit Sweater" style="width: 100%; height: 100%; object-fit: cover;">
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Knit Sweater</div>
+                            <div class="product-price">$38.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(145)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 8 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&h=600&fit=crop" alt="Denim Jacket" style="width: 100%; height: 100%; object-fit: cover;">
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Denim Jacket</div>
+                            <div class="product-price">$64.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span>(98)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 9 -->
+                    <div class="product-card" onclick="showPage('product')">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop" alt="Bodysuit" style="width: 100%; height: 100%; object-fit: cover;">
+                            <span class="product-badge">BESTSELLER</span>
+                            <button class="wishlist-btn">♡</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Sleek Bodysuit</div>
+                            <div class="product-price">$32.99</div>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(215)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Page -->
+    <div id="product" class="page">
+        <div class="product-detail">
+            <div class="product-main">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=1000&fit=crop" alt="Classic Cotton Tee Main" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&h=200&fit=crop" alt="View 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=200&h=200&fit=crop" alt="View 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=200&h=200&fit=crop" alt="View 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=200&h=200&fit=crop" alt="View 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <h1 class="product-title">Classic Cotton Tee</h1>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span>(127 reviews)</span>
+                    </div>
+                    <div class="product-price-large">$24.99</div>
+                    
+                    <div class="rewards-info">
+                        ⭐ Earn 25 Honeydrop Rewards points with this purchase
+                    </div>
+
+                    <p style="margin-bottom: 30px; color: var(--text-gray); line-height: 1.8;">
+                        Your new favorite everyday tee. Made from premium cotton blend for ultimate softness and breathability. Features a classic crew neck and relaxed fit that flatters every body type.
+                    </p>
+
+                    <!-- Size Selector -->
+                    <div class="size-selector">
+                        <h4>Select Size <a href="#" style="color: var(--honey-gold); text-decoration: none;">Size Guide</a></h4>
+                        <div class="size-options">
+                            <button class="size-btn">XS</button>
+                            <button class="size-btn selected">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">2XL</button>
+                            <button class="size-btn">3XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="add-to-cart-section">
+                        <div class="quantity-selector">
+                            <button class="qty-btn">-</button>
+                            <span class="qty-display">1</span>
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <button class="btn btn-primary" style="flex: 1;">Add to Cart</button>
+                        <button class="btn btn-secondary">♡</button>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <strong>Premium Quality</strong><br>
+                                95% Cotton, 5% Spandex blend for comfort and durability
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <strong>Easy Returns</strong><br>
+                                7-day return window with free exchanges
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <strong>Fast Shipping</strong><br>
+                                Free standard shipping on orders over $50
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <strong>Care Instructions</strong><br>
+                                Machine wash cold, tumble dry low. Iron on low if needed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <section class="categories">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=400&h=500&fit=crop" alt="Striped Tee" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Striped Tee</h3>
+                            <p>$26.99</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=500&fit=crop" alt="V-Neck Basic" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="category-info">
+                            <h3>V-Neck Basic</h3>
+                            <p>$22.99</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=500&fit=crop" alt="Graphic Tee" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="category-info">
+                            <h3>Graphic Tee</h3>
+                            <p>$28.99</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="about-hero">
+            <h1>Our Story</h1>
+            <p>At Honeydrop Apparel, fashion is more than just clothing—it's a form of self-expression, confidence, and empowerment.</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-section">
+                <h2>Our Mission</h2>
+                <p>To provide premium-quality apparel that blends affordability, durability, and style, offering customers a seamless shopping experience across all platforms. We are committed to delivering exceptional value through quality craftsmanship, creating inclusive fashion for diverse body types and lifestyles, and building lasting relationships with our customers through transparency and trust.</p>
+                <p>We continuously innovate our designs to reflect current trends and timeless elegance while maintaining sustainable and ethical business practices.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Our Vision</h2>
+                <p>To inspire confidence and comfort in every customer through fashion that is accessible, expressive, and uniquely crafted. We envision a world where every woman has access to premium-quality fashion that celebrates her individuality and enhances her daily life.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Quality & Craftsmanship</h2>
+                <p>Every Honeydrop piece undergoes rigorous quality control testing. We source premium fabrics including cotton blends, polyester, spandex, linen, and specialty materials. Our garments feature consistent stitching, fade-resistant dyes, and are designed to maintain shape and quality after multiple washes.</p>
+                <p>From durability standards to color fastness, we stand behind every product we sell with our 100% quality guarantee.</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Sustainability Commitment</h2>
+                <p>We're actively working toward more sustainable practices. Our initiatives include exploring eco-friendly fabric alternatives, reducing packaging waste, partnering with ethical manufacturers, developing a recycling program, and planning carbon-neutral shipping options.</p>
+                <p>We're committed to continuous improvement in our environmental impact and transparently sharing our progress with our community.</p>
+            </div>
+        </div>
+
+        <section class="email-signup">
+            <h2>Join Our Journey</h2>
+            <p>Be part of the Honeydrop community and stay updated on our latest collections and initiatives</p>
+            <form class="email-form">
+                <input type="email" class="email-input" placeholder="Enter your email">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Support Page -->
+    <div id="support" class="page">
+        <div class="support-container">
+            <h1 class="section-title">Customer Support</h1>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 50px; font-size: 18px;">
+                We're here to help! Reach out to us through any of the channels below.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📧 Email Support</h3>
+                    <p style="color: var(--text-gray); margin: 15px 0;">support@honeydropapparel.com</p>
+                    <p style="font-size: 14px; color: var(--text-gray);">Response time: 2-4 hours (business days)</p>
+                </div>
+                <div class="contact-card">
+                    <h3>💬 Live Chat</h3>
+                    <p style="color: var(--text-gray); margin: 15px 0;">Available on our website</p>
+                    <p style="font-size: 14px; color: var(--text-gray);">Mon-Fri, 9 AM - 6 PM EST</p>
+                </div>
+                <div class="contact-card">
+                    <h3>📱 Social Media</h3>
+                    <p style="color: var(--text-gray); margin: 15px 0;">@honeydropapparel</p>
+                    <p style="font-size: 14px; color: var(--text-gray);">Instagram DM for quick questions</p>
+                </div>
+            </div>
+
+            <!-- Policies -->
+            <div class="about-section">
+                <h2>Shipping Information</h2>
+                <p><strong>Standard Shipping:</strong> 3-7 business days ($5.99 or FREE on orders over $50)</p>
+                <p><strong>Express Shipping:</strong> 1-3 business days ($12.99)</p>
+                <p><strong>Overnight Shipping:</strong> Next business day delivery ($24.99)</p>
+                <p>Processing time: 1-3 business days for standard orders</p>
+            </div>
+
+            <div class="about-section">
+                <h2>Returns & Exchanges</h2>
+                <p><strong>Return Window:</strong> 7 days from delivery date</p>
+                <p><strong>Conditions:</strong> Items must be unworn, unwashed, with original tags attached</p>
+                <p><strong>Refund Method:</strong> Store credit issued as Honeydrop Rewards points (no expiration)</p>
+                <p><strong>Return Shipping:</strong> $5.99 deducted from store credit (FREE for damaged/defective items)</p>
+                <p>We stand behind our products 100%. If you receive a damaged or defective item, we'll replace it or provide a full refund—no questions asked.</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How do I track my order?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Once your order ships, you'll receive an email with tracking information. You can also track your order by logging into your account or using the tracking link provided in your shipping confirmation email.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What sizes do you offer?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        We offer sizes XS to 3XL (expanding to 4XL soon): XS (0-2), S (4-6), M (8-10), L (12-14), XL (16-18), 2XL (20-22), 3XL (24-26). Select items are also available in petite and tall lengths.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Do you offer free shipping?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We offer free standard shipping on all orders over $50. VIP Rewards members (1000+ annual points) receive free shipping on all orders.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        How do I join the Rewards program?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Simply create an account on our website. You'll automatically be enrolled in Honeydrop Rewards and start earning points with your first purchase! Earn 1 point per $1 spent, and 100 points = $5 reward.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What is your return policy?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        We accept returns within 7 days from delivery date. Items must be unworn, unwashed, with original tags attached. Returns are issued as Honeydrop Rewards points (store credit with no expiration). A $5.99 return shipping fee applies, but return shipping is FREE for damaged or defective items.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HONEYDROP</h3>
+                <p style="color: var(--light-gray); margin-top: 15px; line-height: 1.7;">
+                    Modern fashion designed for the contemporary woman. Quality, comfort, and style—all at prices you'll love.
+                </p>
+                <div class="social-icons">
+                    <div class="social-icon">📷</div>
+                    <div class="social-icon">📘</div>
+                    <div class="social-icon">🎵</div>
+                    <div class="social-icon">📌</div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('shop')">New Arrivals</a></li>
+                    <li><a href="#" onclick="showPage('shop')">Bestsellers</a></li>
+                    <li><a href="#" onclick="showPage('shop')">Dresses</a></li>
+                    <li><a href="#" onclick="showPage('shop')">Tops & Blouses</a></li>
+                    <li><a href="#" onclick="showPage('shop')">Loungewear</a></li>
+                    <li><a href="#" onclick="showPage('shop')">Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('support')">Contact</a></li>
+                    <li><a href="#" onclick="showPage('support')">Shipping Info</a></li>
+                    <li><a href="#" onclick="showPage('support')">Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Rewards</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Join Rewards</a></li>
+                    <li><a href="#">Student Discount</a></li>
+                    <li><a href="#">Refer a Friend</a></li>
+                    <li><a href="#">Partnerships</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Honeydrop Apparel. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p style="margin-top: 10px; color: var(--text-gray);">Confidence looks good on you. ✨</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-items">
+            <div class="mobile-nav-item" onclick="showPage('home')">
+                <span>🏠</span>
+                <div>Home</div>
+            </div>
+            <div class="mobile-nav-item" onclick="showPage('shop')">
+                <span>🛍️</span>
+                <div>Shop</div>
+            </div>
+            <div class="mobile-nav-item">
+                <span>🛒</span>
+                <div>Cart</div>
+            </div>
+            <div class="mobile-nav-item">
+                <span>❤️</span>
+                <div>Wishlist</div>
+            </div>
+            <div class="mobile-nav-item">
+                <span>👤</span>
+                <div>Account</div>
+            </div>
+        </div>
+    </nav>
+
+  <!--  <script src="script v2.js"></script>--> 
+     <!-- Load the chat widget -->
+  <!--    <script>
+    window.chatWidgetConfig = {
+        title: "Customer Support",
+        theme: "green",
+        position: "bottom-right",
+        businessId: 15,
+    };
+    </script>
+  <script src="https://widget.microagent.services/chat-loader.production.js"></script> -->
+ <!--      <script src="https://superbee.app.n8n.cloud/webhook/ed45083d-6651-4c66-b351-21df8916ac7a/chat"></script> 
+    <script src="pickering-chat-widget v2.js"></script> -->
+
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button" id="chatButton">
+            <span class="chat-icon">💬</span>
+            <span class="chat-close-icon">✕</span>
+        </button>
+        
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-content">
+                    <span class="chat-logo">HONEYDROP</span>
+                    <span class="chat-subtitle">Customer Support</span>
+                </div>
+                <button class="chat-minimize" id="chatMinimize">−</button>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="bot-message">
+                    <div class="message-bubble bot-bubble">
+                        Hi! 👋 I'm Slavo, your AI assistant! How can I help you today?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
+                <button class="chat-send" id="chatSend">
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
