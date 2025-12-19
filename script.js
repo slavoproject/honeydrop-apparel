@@ -1,5 +1,5 @@
 // Replace this with your actual n8n webhook URL
-const WEBHOOK_URL = 'https://superbee.app.n8n.cloud/webhook/ed45083d-6651-4c66-b351-21df8916ac7a/chat';
+// const WEBHOOK_URL = 'https://superbee.app.n8n.cloud/webhook/ed45083d-6651-4c66-b351-21df8916ac7a/chat';
 
 // Page Navigation
 function showPage(pageId) {
@@ -171,7 +171,7 @@ async function sendMessage() {
 
     // Show typing indicator
     const typingIndicator = showTypingIndicator();
-
+/*
     try {
         // Send message to n8n webhook
         const response = await fetch(WEBHOOK_URL, {
@@ -199,7 +199,7 @@ async function sendMessage() {
         console.error('Chat error:', error);
         typingIndicator.remove();
         addMessage('Sorry, I\'m having trouble connecting. Please try again or email us at support@honeydropapparel.com', 'bot');
-    }
+    } */
 }
 
 // Show typing indicator
